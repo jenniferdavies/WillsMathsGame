@@ -85,7 +85,7 @@ elif st.session_state.question_number <= 12:
             st.error(st.session_state.feedback)
 
     with st.form(key=f"answer_form_{number}", clear_on_submit=True):
-        answer = st.number_input("Your answer", min_value=0, value=0, step=1)
+        answer = st.number_input("Your answer", min_value=0, step=1, value=None, placeholder="Type your answer")
         submitted = st.form_submit_button("Check answer", type="primary")
 
     if submitted:

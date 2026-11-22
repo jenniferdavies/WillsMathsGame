@@ -59,7 +59,7 @@ if st.session_state.question_number == 0:
     digits = 1
     if mode in ("Multiplication", "Division"):
         times_table = st.number_input(
-            "Which times table?", min_value=1, max_value=12, value=3, step=1
+            "Which times table?", min_value=1, value=3, step=1
         )
     else:
         digits = st.radio("How many digits?", [1, 2, 3], horizontal=True)

@@ -91,7 +91,7 @@ elif st.session_state.question_number <= 12:
     if submitted and answer is None:
         st.warning("Please enter an answer!")
     
-    if submitted:
+    if submitted and answer is not None:
         if answer == correct_answer:
             st.session_state.question_number += 1
             st.session_state.feedback = "Correct! Well done!"
